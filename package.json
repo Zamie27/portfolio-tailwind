@@ -1,15 +1,17 @@
 {
   "name": "portofolio",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.1",
+  "description": "add darkmode, fixed bug",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zamie27",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "tailwindcss": "^3.3.2"
   }
 }
