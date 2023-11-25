@@ -607,11 +607,6 @@ video {
   margin-right: 1rem;
 }
 
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -683,6 +678,10 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-5 {
@@ -861,6 +860,11 @@ video {
   border-top-width: 2px;
 }
 
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(56 189 248 / var(--tw-border-opacity));
+}
+
 .border-slate-300 {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
@@ -908,6 +912,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
 .fill-current {
@@ -1148,13 +1157,34 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 body {
   font-family: "inter", sans-serif;
 }
+
+/* scrollbar custom */
+
+body {
+  --sb-track-color: #f1f5f9;
+  --sb-thumb-color: #38bdf8;
+  --sb-size: 10px;
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 20px;
+}
+
+/* scrollbar custom end */
 
 .navbar-fixed {
   position: fixed;
@@ -1301,11 +1331,6 @@ body {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-white) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 :is(.dark .dark\:text-dark) {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
@@ -1319,6 +1344,11 @@ body {
 :is(.dark .dark\:shadow-slate-500) {
   --tw-shadow-color: #64748b;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+:is(.dark .dark\:hover\:text-primary:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {

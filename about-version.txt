@@ -1,0 +1,27 @@
+1.0.0.00
+angka pertama merupakan versi website
+angka kedua adalah update/penambahan besar dalam fitur 
+angka ketiga adalah berapa kali update/penambahan sedikit fitur yang terjadi
+dua angka di akhir adalah berapa kali website ini diperbaiki dari segi bug atau isi konten blog
+
+1.0.0.00
+first commit dengan apa yang ada
+
+1.1.0.00
+-mengubah title dan menambahkan icon
+-mengubah gambar hero dari foto pribadi menjadi 3d karakter
+-sedikit merubah isi about 
+-menambahkan deskripsi portfolio
+-mengubah project dari fake project menjadi real project
+-menambahkan saat title project di hover akan berubah warna
+-menambahkan deskripsi clients
+-menambahkan deskripsi blog
+-menambahkan deskripsi contact
+-sedikit merubah form contact
+
+1.2.0.02
+-menambahkan fitur lihat lainnya di bagian blog agar tidak terlalu banyak konten yang ditampilkan
+-menambahkan tag pada konten blog untuk mengelompokkan konten (masih manual)
+-menambahkan custom scrollbar 
+-mengaktifkan fungsi contact form yang isinya akan dikirim ke email
+-memperbaiki sedikit kesalahan penulisan
