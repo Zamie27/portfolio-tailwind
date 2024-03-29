@@ -25,3 +25,8 @@ first commit dengan apa yang ada
 -menambahkan custom scrollbar 
 -mengaktifkan fungsi contact form yang isinya akan dikirim ke email
 -memperbaiki sedikit kesalahan penulisan
+
+1.3.0.03
+-menambahkan fitur delay pada tombol form ketika tombol di tekan maka akan disable dan kata "Kirim" berubah menjadi "Mengirim"
+-menebalkan nama web di navbar menjadi lebih tebal
+-input form diubah agar isi dan email pengirim dikirim ke email dengan .php server

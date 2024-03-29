@@ -69,7 +69,9 @@ if (
 }
 
 // Hidden Content js
+// jumlah konten
 const totalContent = 10;
+// konten awal
 let visibleContent = 6;
 const contentContainer = document.getElementById("content-container");
 const loadMoreButton = document.getElementById("load-more");
@@ -101,3 +103,38 @@ for (let i = visibleContent; i < totalContent; i++) {
 if (visibleContent >= totalContent) {
   loadMoreButton.style.display = "none";
 }
+
+// Send Massage Alert
+window.addEventListener("load", function () {
+  const form = document.getElementById("my-form");
+  const submitButton = document.getElementById("submit-button");
+  let isButtonLocked = false;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (isButtonLocked) {
+      return; // Do nothing if the button is locked
+    }
+    // Lock the button
+    isButtonLocked = true;
+    submitButton.disabled = true;
+    submitButton.innerText = "Mengirim";
+    submitButton.classList.add("bg-opacity-50");
+
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: "POST",
+      body: data,
+    }).then(() => {
+      alert("Pesan Terkirim!");
+      // Unlock the button after a delay (e.g., 2 seconds)
+      setTimeout(function () {
+        isButtonLocked = false;
+        submitButton.disabled = false;
+        submitButton.innerText = "Kirim";
+        submitButton.classList.remove("bg-opacity-50");
+      }, 2000);
+    });
+  });
+});
